@@ -1,0 +1,52 @@
+.game-card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.game-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.game-title {
+  font-size: 1.1rem;
+  margin: 0.7rem 0 0.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.3rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #f5f5f5;         /* ✅ 더 밝게 */
+  margin-bottom: 0.7rem;
+  opacity: 1;
+}
+
+.meta-score {
+  background-color: #4caf50;
+  color: white;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.user-score {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: #ffffff;         /* ✅ 더 뚜렷하게 */
+  opacity: 1;
+}

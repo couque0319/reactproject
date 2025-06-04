@@ -1,0 +1,43 @@
+.game-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.game-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.game-detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.meta-score,
+.user-score {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
