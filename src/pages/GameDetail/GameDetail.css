@@ -11,6 +11,7 @@
 .game-detail h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #999999 !important;  /* ✅ 밝은 회색으로 제목 설정 */
 }
 
 .game-detail-image {
@@ -30,7 +31,7 @@
 
 .description {
   font-size: 1rem;
-  color: #333;
+  color: #999999 !important; /* 조금 더 어두운 회색 */
   margin-bottom: 1rem;
   line-height: 1.6;
 }

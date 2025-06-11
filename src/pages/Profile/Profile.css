@@ -1,20 +1,22 @@
-/* Profile.css */
 .profile-wrapper {
   display: flex;
   height: 100vh;
-  background: #f8f8f8;
+  background: #1a1a1a; /* ✅ 어두운 배경으로 전환 */
+  color: #f0f0f0;       /* ✅ 전체 기본 텍스트 색상 */
 }
 
 .profile-sidebar {
   width: 240px;
-  background: #eee;
+  background: #2a2a2a;  /* 사이드바 어두운 배경 */
   padding: 2rem;
   font-family: Arial, sans-serif;
+  color: #ffffff;
 }
 
 .profile-sidebar h2 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  color: #ffd700;       /* 강조되는 제목 색상 */
 }
 
 .profile-sidebar ul {
@@ -26,11 +28,12 @@
   margin-bottom: 1rem;
   font-weight: bold;
   cursor: pointer;
+  color: #f0f0f0;
 }
 
 .profile-sidebar .active {
-  color: black;
-  border-left: 4px solid black;
+  color: #ffd700;
+  border-left: 4px solid #ffd700;
   padding-left: 8px;
 }
 
@@ -38,13 +41,15 @@
   flex: 1;
   padding: 2rem;
   font-family: Arial, sans-serif;
+  background: #1a1a1a;
 }
 
 .profile-main h3 {
   font-size: 1.5rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #444;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .review-list {
@@ -54,26 +59,27 @@
 
 .review-list li {
   margin-bottom: 1.5rem;
-  background: white;
+  background: #2c2c2c;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  color: #ffffff;
 }
 
 .review-list li a {
   font-weight: bold;
   font-size: 1.1rem;
-  color: black;
+  color: #ffd700;
   text-decoration: none;
 }
 
 .review-list li p {
   margin-top: 0.5rem;
   font-size: 0.95rem;
-  color: #444;
+  color: #dddddd;
 }
 
 .no-review {
   font-style: italic;
-  color: #777;
+  color: #888888;
 }
