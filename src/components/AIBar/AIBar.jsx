@@ -14,22 +14,22 @@ function AIBar() {
     setResponse('');
 
     try {
-      const res = await fetch('http://localhost/reactproject/api/ask_ai.php', { // 🔧 절대경로로 수정
+      const res = await fetch('http://localhost/reactproject/api/ask_ai.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: input })
       });
 
       const data = await res.json();
-      console.log('AI 응답:', data);
+      console.log("Gemini 응답:", data);
 
-        if (data.choices && data.choices[0]?.message?.content) {
-        setResponse(data.choices[0].message.content);
-        } else if (data.error) {
-          setResponse('❗ OpenAI 오류: ' + data.error);
-        } else {
-            setResponse('AI 응답 오류');
-        }
+      if (data.response) {
+        setResponse(data.response);
+      } else if (data.error) {
+        setResponse('❗ Gemini 오류: ' + data.error);
+      } else {
+        setResponse('AI 응답 오류');
+      }
     } catch (err) {
       setResponse('요청 실패: ' + err.message);
     }
