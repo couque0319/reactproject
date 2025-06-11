@@ -1,3 +1,4 @@
+// src/pages/Home/Home.jsx
 import React, { useEffect, useState } from 'react';
 import GameCard from '../../components/GameCard/GameCard';
 import './Home.css';
@@ -8,7 +9,12 @@ function Home() {
   useEffect(() => {
     fetch('/reactproject/api/get_games.php')
       .then(res => res.json())
-      .then(data => setGames(data));
+      .then(data => {
+        console.log("게임 데이터 개수:", data.length);
+        console.log("샘플 게임 구조:", data[0]);
+        setGames(data);
+      })
+      .catch(err => console.error("게임 데이터를 불러오는 중 오류:", err));
   }, []);
 
   return (

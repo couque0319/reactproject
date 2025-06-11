@@ -1,0 +1,79 @@
+/* Profile.css */
+.profile-wrapper {
+  display: flex;
+  height: 100vh;
+  background: #f8f8f8;
+}
+
+.profile-sidebar {
+  width: 240px;
+  background: #eee;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.profile-sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-sidebar li {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-sidebar .active {
+  color: black;
+  border-left: 4px solid black;
+  padding-left: 8px;
+}
+
+.profile-main {
+  flex: 1;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.profile-main h3 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.review-list li a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.review-list li p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.no-review {
+  font-style: italic;
+  color: #777;
+}

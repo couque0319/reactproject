@@ -1,4 +1,3 @@
-// src/pages/GameList/GameList.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './GameList.css';
@@ -9,8 +8,13 @@ function GameList() {
 
   useEffect(() => {
     fetch('/reactproject/api/get_games.php')
-      .then(res => res.json())
-      .then(data => setGames(data));
+  .then(res => {
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    return res.json();
+  })
+  .then(data => setGames(data))
+  .catch(err => console.error("게임 데이터를 불러오는 중 오류 발생:", err));
+
   }, []);
 
   const filteredGames = games.filter(game =>
@@ -29,15 +33,17 @@ function GameList() {
       />
       <div className="game-horizontal-list">
         {filteredGames.map(game => (
-          <div className="horizontal-game-card" key={game.id}>
-            <img src={game.image_url} alt={game.title} className="horizontal-game-image" />
-            <div className="horizontal-game-info">
-              <h3 className="horizontal-game-title">{game.title}</h3>
-              <p className="horizontal-description">{game.description?.slice(0, 120)}...</p>
-              <p className="meta-score">메타 점수: {game.meta_score}</p>
-              <p className="user-score">유저 점수: {game.user_score}</p>
+          <Link to={`/games/${game.id}`} key={game.id} className="horizontal-game-card-link">
+            <div className="horizontal-game-card">
+              <img src={game.image_url} alt={game.title} className="horizontal-game-image" />
+              <div className="horizontal-game-info">
+                <h3 className="horizontal-game-title">{game.title}</h3>
+                <p className="horizontal-description">{game.description?.slice(0, 120)}...</p>
+                <p className="meta-score">메타 점수: {game.meta_score}</p>
+                <p className="user-score">유저 점수: {game.user_score}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </main>

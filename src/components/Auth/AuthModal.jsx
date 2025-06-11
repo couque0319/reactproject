@@ -1,5 +1,7 @@
 // src/components/Auth/AuthModal.jsx
 import React, { useState } from 'react';
+import LoginForm from './LoginForm';
+import SignupForm from './SignupForm';
 import './AuthModal.css';
 
 function AuthModal({ onClose }) {
@@ -12,22 +14,14 @@ function AuthModal({ onClose }) {
         {mode === 'login' ? (
           <>
             <h2>로그인</h2>
-            <form>
-              <input type="text" placeholder="아이디" />
-              <input type="password" placeholder="비밀번호" />
-              <button type="submit">로그인</button>
-            </form>
-            <p onClick={() => setMode('signup')}>계정이 없으신가요? 회원가입</p>
+            <LoginForm onClose={onClose} />
+            <p onClick={() => setMode('signup')}>계정이 없으신가요? <strong>회원가입</strong></p>
           </>
         ) : (
           <>
             <h2>회원가입</h2>
-            <form>
-              <input type="text" placeholder="아이디" />
-              <input type="password" placeholder="비밀번호" />
-              <button type="submit">회원가입</button>
-            </form>
-            <p onClick={() => setMode('login')}>이미 계정이 있으신가요? 로그인</p>
+            <SignupForm onClose={onClose} />
+            <p onClick={() => setMode('login')}>이미 계정이 있으신가요? <strong>로그인</strong></p>
           </>
         )}
       </div>
